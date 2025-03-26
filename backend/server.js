@@ -3,6 +3,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const postRoutes = require("./routes/postRoutes");
+const commentRoutes = require("./routes/commentRoutes");
+
+
 
 dotenv.config();
 
@@ -12,6 +16,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use("/api/posts", postRoutes);
+app.use("/api/comments", commentRoutes);
 //app.use('/api/tasks', require('./routes/taskRoutes'));
 
 // Export the app object for testing
