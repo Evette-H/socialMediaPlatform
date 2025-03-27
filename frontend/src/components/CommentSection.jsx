@@ -16,7 +16,7 @@ try {
 } catch (err) {
   console.error("Error parsing user from localStorage in CommentSection:", err);
 }
-const currentUserId = currentUser?._id;
+
 
   const fetchComments = async () => {
     try {
