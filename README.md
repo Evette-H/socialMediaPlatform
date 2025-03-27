@@ -1,5 +1,3 @@
-echo "# trigger test" second time
-echo "🧪 Trigger test for self-hosted runner"
 # **Assignment: Full-Stack CRUD Application Development with DevOps Practices**
 
 ## **Objective**
