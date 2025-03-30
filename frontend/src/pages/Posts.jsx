@@ -11,7 +11,7 @@ const Posts = () => {
       const token = localStorage.getItem("token");
       console.log("Token being sent:", token);
 
-      const response = await axiosInstance.get("/posts", {
+      const response = await axiosInstance.get("/api/posts", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
