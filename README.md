@@ -1,3 +1,4 @@
+hello it's a test
 ### Social Media Platform
 A simple full-stack social media application that allows users to register, log in, create and manage posts, like/unlike content, and comment on posts. Built with Node.js, React, MongoDB, and deployed using GitHub Actions and AWS EC2.
 
