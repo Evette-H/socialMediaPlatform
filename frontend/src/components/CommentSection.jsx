@@ -20,7 +20,7 @@ try {
 
   const fetchComments = async () => {
     try {
-      const response = await axiosInstance.get(`/comments/${postId}`, {
+      const response = await axiosInstance.get(`/api/comments/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -40,7 +40,7 @@ try {
 
     try {
       const response = await axiosInstance.post(
-        `/comments/${postId}`,
+        `/api/comments/${postId}`,
         { content: newComment },
         {
           headers: {
@@ -61,7 +61,7 @@ try {
   const handleDeleteComment = async (commentId) => {
     try {
       const response = await axiosInstance.delete(
-        `/comments/${postId}/${commentId}`,
+        `/api/comments/${postId}/${commentId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

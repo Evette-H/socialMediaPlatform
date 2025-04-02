@@ -21,7 +21,7 @@ const PostList = ({ posts, setPosts }) => {
     try {
       const token = localStorage.getItem("token");
 
-      await axiosInstance.delete(`/posts/${postId}`, {
+      await axiosInstance.delete(`/api/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -43,7 +43,7 @@ const PostList = ({ posts, setPosts }) => {
       const token = localStorage.getItem("token");
 
       const response = await axiosInstance.put(
-        `/posts/${postId}`,
+        `/api/posts/${postId}`,
         { content: editedContent },
         {
           headers: {
@@ -72,7 +72,7 @@ const PostList = ({ posts, setPosts }) => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axiosInstance.post(`/posts/${postId}/like`, {}, {
+      const response = await axiosInstance.post(`/api/posts/${postId}/like`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -92,7 +92,7 @@ const PostList = ({ posts, setPosts }) => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axiosInstance.post(`/posts/${postId}/unlike`, {}, {
+      const response = await axiosInstance.post(`/api/posts/${postId}/unlike`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

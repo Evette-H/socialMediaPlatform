@@ -22,7 +22,7 @@ const PostForm = ({ onPostCreated }) => {
 
     try {
       const response = await axiosInstance.post(
-        "/posts",
+        "/api/posts",
         { content },
         {
           headers: {
